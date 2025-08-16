@@ -35,3 +35,14 @@ function atualizarLista() {
         lista.appendChild(item)
     }
 }
+
+function sortearAmigo() {
+    if (amigos.length == 0) {
+        alert("Por favor, adicione pelo menos um nome antes de sortear.")
+        return 
+    }
+
+    let indiceAleatorio = Math.floor(Math.random() * amigos.length)
+    let amigoSorteado = amigos[indiceAleatorio]
+    document.getElementById('resultado').innerHTML = `O amigo sorteado é: <strong>${amigoSorteado}</strong>`
+} 
